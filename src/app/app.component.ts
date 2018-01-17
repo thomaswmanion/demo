@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Test } from '@core/test';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  i = JSON.parse(sessionStorage.getItem('i') || '0');
+
+  increment() {
+    this.i++;
+    sessionStorage.setItem('i', this.i);
+  }
 }
