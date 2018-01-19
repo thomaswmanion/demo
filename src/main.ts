@@ -6,6 +6,8 @@ import { environment } from './environments/environment';
 
 import { hmrBootstrap } from './hmr';
 
+import 'rxjs/add/operator/toPromise';
+
 if (environment.production) {
   enableProdMode();
 }

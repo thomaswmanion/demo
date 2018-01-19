@@ -1,0 +1,9 @@
+<div class="container">
+  <p>Current state of API: {{state.customerPageSubject.value}}</p>
+
+  <button class="btn btn-primary" (click)="state.getStarWarsCharacter()">Get Star Wars Character</button>
+
+  <div *ngIf="state.currentCharacter">
+    {{ state.currentCharacter | json }}
+  </div>
+</div>
