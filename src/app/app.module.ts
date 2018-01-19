@@ -1,3 +1,6 @@
+import { CoreModule } from './core/core.module';
+import { NavbarComponent } from './core/modules/theme/navbar/navbar.component';
+import { ThemeModule } from './core/modules/theme/theme.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +15,8 @@ import { CustomerModule } from './customer/customer.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CustomerModule
+    CustomerModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

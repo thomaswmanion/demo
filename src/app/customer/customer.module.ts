@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { CustomerService } from './customer.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   declarations: [CustomerComponent],
   providers: [

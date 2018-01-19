@@ -1,0 +1,30 @@
+<div id="purchase-phone" class="container">
+  <h1>Purchase a phone</h1>
+  <hr>
+  <form [formGroup]="phoneForm" (ngSubmit)="save(phoneForm.value)">
+    <label>Name</label>
+    <input class="form-control" formControlName="name"/>
+
+    <label>Email</label>
+    <input class="form-control" formControlName="email"/>
+
+    <label>Phone Number</label>
+    <input class="form-control" formControlName="phoneNumber"/>
+
+    <label>Address</label>
+    <input class="form-control" formControlName="address"/>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!phoneForm.valid">Submit</button>
+  </form>
+</div>
+
+<!-- <p>Form Value: {{phoneForm.value | json}}</p>
+<p>Form Touched: {{phoneForm.touched}}</p>
+<p>Form Dirty: {{phoneForm.dirty}}</p>
+<p>Form Pristine: {{phoneForm.pristine}}</p>
+<p>Form Valid: {{phoneForm.valid}}</p> -->
+
+<p>Phone Number Valid: {{phoneForm.get('phoneNumber').valid}}</p>
+<p>Phone Number Errors: {{phoneForm.get('phoneNumber').errors?.phoneNumber | json}}</p>
